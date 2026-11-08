@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "SumRNLuD8yc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joaog\\Documents\\Projects\\pet-feeder\\api\\api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\mqttnet\\3.0.6\\mqttnet.3.0.6.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
