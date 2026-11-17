@@ -1,15 +1,19 @@
 #include <Arduino.h>
-#include <wifi.cpp>
+#include "wifi.h"
+#include "mqtt.h"
+
+const int LED_PIN = 12;
 
 void setup() {
+  Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT);
   connectWifi();
-  pinMode(12, OUTPUT);
+  mqtt.connect();
 }
 
 void loop() {
-  digitalWrite(12, HIGH);
-  delay(2000);
+  String msg = mqtt.waitMessage();
 
-  digitalWrite(12, LOW);
-  delay(2000);
+  if (msg == "turn on") digitalWrite(LED_PIN, HIGH);
+  else if (msg == "turn off") digitalWrite(LED_PIN, LOW);
 }
