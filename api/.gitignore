@@ -1,2 +1,9 @@
 obj
 bin
+
+prototype-data.json
+prototype-data.json.tmp
+
+prototype.local.ps1
+
+.env

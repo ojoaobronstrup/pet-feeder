@@ -106,6 +106,8 @@ Não será necessário implementar autenticação por e-mail e senha.
 
 O backend deverá validar a identidade informada pelos provedores e gerenciar sessões próprias da aplicação.
 
+Na tela de entrada, apresentar a marca no topo e a ação de autenticação próxima à parte inferior, com rolagem quando o conteúdo não couber. Não exibir breadcrumbs nem o rótulo “protótipo de validação”.
+
 ### RF-002 — Persistência de sessão
 
 A sessão deverá permanecer ativa entre aberturas do aplicativo, enquanto válida.
@@ -126,6 +128,8 @@ O e-mail associado ao provedor deve ser apresentado quando disponibilizado pelo 
 ### RF-004 — Encerramento de sessão
 
 O usuário poderá encerrar sua sessão a qualquer momento.
+
+Em todas as telas autenticadas, apresentar um cabeçalho com a marca Qnis à esquerda e uma ação de encerramento de sessão à direita. Ao sair, retornar à tela de entrada, inclusive a partir de telas internas.
 
 O sistema também deverá permitir solicitar a exclusão da conta, respeitando regras de retenção e propriedade dos dispositivos.
 
@@ -697,3 +701,9 @@ As seguintes decisões deverão ser validadas antes da implementação definitiv
 O aplicativo deve transmitir controle, precisão e confiabilidade, permitindo que o usuário acompanhe e alimente seu pet com o mínimo de esforço.
 
 A estética cósmica deve reforçar a identidade do produto sem prejudicar a usabilidade. A prioridade é construir uma solução confiável, visualmente sofisticada e preparada para evolução comercial.
+
+## Etapa de validação física (2026-11-22)
+
+O aplicativo segue o projeto Pet Feeder no Penpot e apresenta a experiência de alimentação sem mencionar o LED. Nesta etapa, o ESP32 aciona um LED em vez do mecanismo físico: uma solicitação manual ou um agendamento gera um pulso de 10 segundos. A confirmação do dispositivo indica aplicação do comando, sem comprovar quantidade ou dispensação física. Não apresentar medições inexistentes como reais.
+
+A API mantém agendamentos e histórico no PostgreSQL. Os agendamentos são pontuais, dependem da API em execução e são marcados como perdidos quando o dispositivo está offline no horário, sem execução tardia. O acesso atual usa Google e uma conta autorizada; recorrência, porções, sensores e pareamento permanecem requisitos futuros.
