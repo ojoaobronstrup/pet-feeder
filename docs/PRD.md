@@ -707,3 +707,9 @@ A estética cósmica deve reforçar a identidade do produto sem prejudicar a usa
 O aplicativo segue o projeto Pet Feeder no Penpot e apresenta a experiência de alimentação sem mencionar o LED. Nesta etapa, o ESP32 aciona um LED em vez do mecanismo físico: uma solicitação manual ou um agendamento gera um pulso de 10 segundos. A confirmação do dispositivo indica aplicação do comando, sem comprovar quantidade ou dispensação física. Não apresentar medições inexistentes como reais.
 
 A API mantém agendamentos e histórico no PostgreSQL. Os agendamentos são pontuais, dependem da API em execução e são marcados como perdidos quando o dispositivo está offline no horário, sem execução tardia. O acesso atual usa Google e uma conta autorizada; recorrência, porções, sensores e pareamento permanecem requisitos futuros.
+
+### Protótipo mecânico imprimível
+
+O alimentador físico deve armazenar 3 kg de ração seca e dispensá-la por uma rosca sem-fim horizontal sob o reservatório, com saída por gravidade para uma tigela removível. O [modelo CadQuery](../3d/README.md) assume ração com densidade aparente de 0,50 kg/L e usa peças separadas para impressão em um volume de 220 × 220 × 220 mm.
+
+A validação física deve verificar montagem, estabilidade com carga, escoamento sem travamentos, vazamento em repouso, proteção contra acesso à rosca e massa dispensada por volta com a ração escolhida.
